@@ -2,7 +2,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/opentableknowledge'
+    connection: 'postgresql://localhost/opentableknowledge'
   },
   production: {
     client: 'pg',
