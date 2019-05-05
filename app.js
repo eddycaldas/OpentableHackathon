@@ -3,13 +3,12 @@ const app = express()
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 8080
 
-const routes = {
-  knowledgearticle: require('./routes/knowledgearticle')
-}
-
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+const routes = {
+  knowledgearticle: require('./routes/knowledgearticle')
+}
 
 app.use('/knowledgearticle', routes.knowledgearticle)
 
