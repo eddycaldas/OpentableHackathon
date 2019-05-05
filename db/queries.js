@@ -2,9 +2,9 @@ const knex = require('./')
 
 module.exports = {
   knowledgearticle: {
-    // delete(id) {
-    //   return knex('knowledgearticle').where({id}).delete()
-    // },
+    delete(id) {
+      return knex('knowledgearticle').where({id}).delete()
+    },
     // create(body) {
     //   return knex('knowledgearticle').insert(body)
     // },
