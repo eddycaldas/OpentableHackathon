@@ -14,7 +14,7 @@ router.get('/:id', (req, res) => {
 
 router.put('/:id', (req, res) => {
   queries.knowledgearticle.update(req.params.id, req.body)
-  .then((knowledgearticle) => res.send(200))
+  .then((knowledgearticle) => res.sendStatus(200))
 })
 
 router.delete('/:id', (req, res) => [

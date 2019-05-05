@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
           title: 'GuestCenter POS Integration FAQs',
           articlenumber: '000001821',
           url: 'https://opentable.my.salesforce.com/articles/en_US/Info/GuestCenter-POS-Integration-FAQs/p'
-        }
+        },
       ]);
     });
 };
