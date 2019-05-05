@@ -2,6 +2,11 @@ const express = require("express");
 const router = express.Router();
 const queries = require("../db/queries")
 
+router.get('/', (req, res) => {
+  queries.knowledgearticle.list()
+  .then((data) => res.json(data))
+})
+
 router.post('/', (req, res) => {
   queries.knowledgearticle.create(req.body)
   .then((knowledgearticle) => res.json(knowledgearticle))
@@ -21,10 +26,5 @@ router.delete('/:id', (req, res) => [
   queries.knowledgearticle.delete(req.params.id)
   .then(() => res.sendStatus(202))
 ])
-
-router.get('/', (req, res) => {
-  queries.knowledgearticle.list()
-  .then((data) => res.json(data))
-})
 
 module.exports = router
