@@ -2,9 +2,18 @@ const express = require("express");
 const router = express.Router();
 const queries = require("../db/queries")
 
-router.get('/', (req, res) => {
-  queries.knowledgearticle.list()
-  .then((data) => res.json(data))
+// router.get('/', (req, res) => {
+//   queries.knowledgearticle.list()
+//   .then((data) => res.json(data))
+// })
+
+router.get('/', function (req, res) {
+  queries
+    .knowledgearticle
+    .getAll()
+    .then(family => {
+      res.json(family)
+    });
 })
 
 router.post('/', (req, res) => {

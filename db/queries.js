@@ -14,8 +14,11 @@ module.exports = {
     update(id, body) {
       return knex("knowledgearticle").where({id}).update(body)
     },
-    list() {
-      return knex('knowledgearticle')
-    },
+    // list() {
+    //   return knex('knowledgearticle')
+    // },
+    getAll: function() {
+  return knex('knowledgearticle');
+},
   }
 }
